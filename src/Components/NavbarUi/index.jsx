@@ -1,6 +1,6 @@
-import style from '../NavbarUi/style.module.css'
+import style from './style.moduleS.css'
 
-export default function NavbarUi(){
+export default function NavbarUI(){
     <div className={`${style.navbarMargin}`} > 
             <div className={`${style.roundNav} ${style.color2}`}>
                     <div style={{
