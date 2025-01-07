@@ -1,5 +1,5 @@
 import { RouterProvider } from "react-router";
-import router from "./Routs/Routes";
+import router from "./Routs/Routes.jsx";
 import "./index.css"
 
 function App() {
@@ -8,8 +8,4 @@ function App() {
   )
 }
 
-function Root(){
-  return <App />
-}
-
-export default Root;
+export default App;

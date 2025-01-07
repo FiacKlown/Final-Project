@@ -26,7 +26,7 @@ function AppHome(){
     console.log(games, "APPHOME");
     return(
         <main className="container">
-           {/*  <SideBarFilter /> */}
+            {/* <SideBarFilter /> */}
 
             
             <div className="gamesWrapper">

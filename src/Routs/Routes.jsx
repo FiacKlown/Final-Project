@@ -7,12 +7,14 @@ import AppSignUP from "../Pages/AppSignUP"
 
 
 
-const router = createRoutesFromElements(
+const router = createBrowserRouter(
+    createRoutesFromElements(
         <Route path="/" element={<AppLayout />}>
-            <Route path="/" element={<AppHome />} loader={preLoadedFilters} />
+            <Route path="/" element={<AppHome />} />
 
 
         </Route>
     )
+)
 
 export default router
