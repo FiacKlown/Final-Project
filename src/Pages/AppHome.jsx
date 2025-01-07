@@ -1,6 +1,6 @@
 import { useEffect, useState} from "react";
-import GameUI from "../Components/GameUI";
-import SideBarFilter from "../Components/SidebarFilter"
+import GameUI from "../Components/GameUI/Index";
+/* import SideBarFilter from "../Components/SidebarFilter" */
 
 
 function AppHome(){
@@ -22,11 +22,11 @@ function AppHome(){
         
         fetchGames();
     },[])
-    
+
     console.log(games, "APPHOME");
     return(
         <main className="container">
-            <SideBarFilter />
+           {/*  <SideBarFilter /> */}
 
             
             <div className="gamesWrapper">
@@ -36,13 +36,11 @@ function AppHome(){
 
                 <div className="gameList ">
                     {games.map((game) => (
-                        <GameUI key={game.id} game={game} />
-                        
-                    ))}  
-                    
+                        <GameUI key={game.id} game={game} />    
+                    ))}
                 </div>     
+
                 {loading && <article aria-busy="true" className="loading"></article>}
-                
             </div>
         </main>
         

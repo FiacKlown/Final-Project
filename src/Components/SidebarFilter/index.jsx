@@ -1,4 +1,4 @@
-import { useLoaderData, Link } from "react-router";
+/* import { useLoaderData, Link } from "react-router";
 
 
 export default function sideBarFilters(){
@@ -31,4 +31,4 @@ export default function sideBarFilters(){
                 </aside>
         </main> 
     )
-}
+} */
