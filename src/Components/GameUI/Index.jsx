@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-/* import style from './style.modules.css"'; */
+/* import style from './style.module.css"'; */
 import GameImage from './components/GameImage';
 
 function GameUI({ game }){

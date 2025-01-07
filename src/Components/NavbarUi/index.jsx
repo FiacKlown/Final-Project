@@ -1,4 +1,4 @@
-import style from './style.moduleS.css'
+import style from './style.module.css'
 
 export default function NavbarUI(){
     <div className={`${style.navbarMargin}`} > 
