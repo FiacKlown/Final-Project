@@ -10,6 +10,10 @@
   display: flex;
 }
 
+.left{
+  margin-left: 10px;
+}
+
 /* SIDEBAR */
 main{
   display: flex;
@@ -19,22 +23,6 @@ main{
 main > aside{
   width: 20%;
   padding: 15px;
-}
-
-/* CARD */
-.article-card:hover {
-  transform: translateY(-10px);
-  transition: all 0.4s ease;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.imgBorder{
-  border-radius: 10px;
-}
-
-.game{
-  border-radius: 20px;
-  border: 3px solid rgba(219, 102, 34, 0.589);
 }
 
 /* MAIN HOME Colonne della home*/

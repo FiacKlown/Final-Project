@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router";
-/* import style from './style.module.css"'; */
+import style from './style.module.css';
 import GameImage from './components/GameImage';
 
 function GameUI({ game }){
     const{ background_image: image } = game;
     return(
-        <Link to={ `/game/${game.id}` }>
-            <article className="text-white article-card game">
-                <GameImage image={image} />
+        <Link to={ `/game/${game.id}` } className={`${style.cardLink}`}>
+            <article className={`${style. game} ${style.articleCard}`}>
+                <GameImage image={image} className="" />
                 <h4>{game.name}</h4>
-                <p>{game.genres.map((genre) => genre.name).join(", ")}</p>
+                <p className={`${style.txtColor}`}>{game.genres.map((genre) => genre.name).join(", ")}</p>
             </article>
         </Link>
     )

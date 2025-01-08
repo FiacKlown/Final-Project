@@ -1,32 +1,24 @@
-import { Outlet } from "react-router"
-import NavbarUI from "../Components/NavbarUi"
+/* import { Outlet } from "react-router" */
+import NavbarUI from "../Components/NavbarUI"
+import SidebarFilter from "../Components/SidebarFilter"
+/* import { useLoaderData, Link } from "react-router"; */
 
 function AppLayout(){
-    return (
-        <div>
-            {/* <div className="navbarMargin" > 
-                        <div className="roundNav color2">
-                                <div style={{
-                                    width: "40%"
-                                }}>
-                                    <input className="searchBar left"
-                                        type="search"
-                                        name="search"
-                                        placeholder="Search"
-                                        aria-label="Search"
-                                    />
-                                </div>
-                                <div className="buttonPosition" style={{ marginLeft: "auto" }}>
-                                    <button className="loginBtn left">Login</button>
-                                    <button className="loginBtn left">Register</button>
-                                </div>
-                                        
-                        </div >
-                </div> */}
+  /*   const {genres, platforms} = useLoaderData */
 
-            <NavbarUI />        
-            <Outlet />    
-        </div>
+    return (
+            <div className="">
+                <NavbarUI/>
+                
+                <main>
+                    <SidebarFilter />
+                </main>
+                
+                
+                 
+            </div> 
+              
+
     )
 }
 

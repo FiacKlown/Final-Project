@@ -1,11 +1,11 @@
 import style from './style.module.css'
 
 export default function NavbarUI(){
-    <div className={`${style.navbarMargin}`} > 
+
+    return(
+        <div className={`${style.navbarMargin}`} > 
             <div className={`${style.roundNav} ${style.color2}`}>
-                    <div style={{
-                        width: "40%"
-                    }}>
+                    <div className={`${style.searchNav}`}>
                         <input className={`${style.searchBar} ${style.left}`}
                             type="search"
                             name="search"
@@ -16,8 +16,11 @@ export default function NavbarUI(){
                     <div className={`${style.buttonPosition}`} style={{ marginLeft: "auto" }}>
                         <button className={`${style.loginBtn} ${style.left}`}>Login</button>
                         <button className={`${style.loginBtn} ${style.left}`}>Register</button>
-                    </div>
-                            
+                    </div>       
             </div >
-    </div>
+            
+        </div>
+    )
+
+    
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState} from "react";
-import GameUI from "../Components/GameUI/Index";
+/* import GameUI from "../Components/GameUI/Index"; */
 /* import SideBarFilter from "../Components/SidebarFilter" */
-
+import GameUI from "../Components/GameUI/Index";
 
 function AppHome(){
 
@@ -25,24 +25,20 @@ function AppHome(){
 
     console.log(games, "APPHOME");
     return(
-        <main className="container">
-           {/*  <SideBarFilter /> */}
-
-            
             <div className="gamesWrapper">
-                <h1 className="title">Trend e novità sui MIGLIORI Giochi</h1>
+                
+                <h1 className="title ">Trend e novità sui MIGLIORI Giochi</h1>
 
-                <label htmlFor="search">Scopri nuovi giochi, i tred del momento e divertiti a confrontarli</label>
+                <p>Scopri nuovi giochi, i tred del momento e divertiti a confrontarli</p>
 
                 <div className="gameList ">
                     {games.map((game) => (
-                        <GameUI key={game.id} game={game} />    
+                        <GameUI key={game.id} game={game} />
                     ))}
                 </div>     
 
                 {loading && <article aria-busy="true" className="loading"></article>}
             </div>
-        </main>
         
     )
 }
