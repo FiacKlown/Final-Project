@@ -1,6 +1,6 @@
 import { useEffect, useState} from "react";
 /* import GameUI from "../Components/GameUI/Index"; */
-/* import SideBarFilter from "../Components/SidebarFilter" */
+/* import SidebarFilter from "../Components/SidebarFilter" */
 import GameUI from "../Components/GameUI/Index";
 
 function AppHome(){
@@ -26,7 +26,7 @@ function AppHome(){
     console.log(games, "APPHOME");
     return(
             <div className="gamesWrapper">
-                
+
                 <h1 className="title ">Trend e novità sui MIGLIORI Giochi</h1>
 
                 <p>Scopri nuovi giochi, i tred del momento e divertiti a confrontarli</p>

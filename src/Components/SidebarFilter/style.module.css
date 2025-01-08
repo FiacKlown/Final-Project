@@ -1,9 +1,8 @@
-/* main{
-    display: flex;
-    width: 100%;
-  }
-  
-main > aside{
-    width: 20%;
-    padding: 15px;
-} */
+.scrollBtn{
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.sidebar{
+  padding-left: 10px;
+}

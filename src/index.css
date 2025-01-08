@@ -14,20 +14,12 @@
   margin-left: 10px;
 }
 
-/* SIDEBAR */
-main{
-  display: flex;
-  width: 100%;
-}
-
-main > aside{
-  width: 20%;
-  padding: 15px;
-}
-
 /* MAIN HOME Colonne della home*/
 .gameList{
-  column-count: 3;
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -42,7 +34,7 @@ main > aside{
 }
 
 .gamesWrapper{
-  width: 80%;
+  width: 100%;
   padding: 10px;
 }
 

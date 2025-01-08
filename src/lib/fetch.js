@@ -17,9 +17,8 @@ export async function getPlatforms(){
 export async function preLoadedFilters(){
     const genres = await getGenres()
     const platforms = await getPlatforms()
-
-   return(
-    genres,
-    platforms
-   )
+    return {
+        genres,
+        platforms
+    };
 }
