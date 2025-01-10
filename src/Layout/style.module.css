@@ -1,0 +1,7 @@
+.layoutWrapper{
+    display: flex;
+}
+
+.sidebarWrapper{
+    width: 25%;
+}

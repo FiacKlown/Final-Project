@@ -1,0 +1,22 @@
+.cardResult{
+    width: 100%;
+    padding: 8px 0px;
+    display: flex;
+}
+
+.imgAvatarResult{
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+small{
+    margin: 0;
+    padding: 0;
+}
+
+.suggestWrapper{
+    max-height: 250px;
+    overflow-y: scroll;
+}

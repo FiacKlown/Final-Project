@@ -16,9 +16,7 @@
 
 /* MAIN HOME Colonne della home*/
 .gameList{
-  background-color: red;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -26,7 +24,6 @@
 .loading{
   font-size: 2rem;
   display: block;
-
 }
 
 .title{
@@ -38,3 +35,55 @@
   padding: 10px;
 }
 
+/* DETAIL */
+.game_detail_wrapper{
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.game_info{
+  width: 60%;
+}
+
+.game_media{
+  width: 40%;
+}
+
+
+/* APP SIGNIN */
+/* signin signup button botton */
+.BtnPosition{
+  margin-top: 10px;
+  text-align: right;
+}
+
+.btnHomePosition{
+  margin-top: 10px;
+}
+
+.btnHome{
+  text-decoration: none;
+}
+
+.loginBtn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid rgb(50, 50, 50);
+  background-color: rgb(50, 50, 50);
+  color: white;
+  font-size: 20px; 
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.loginBtn:hover {
+  background-color: rgb(50, 50, 50); 
+  border-color: white;
+}
+
+/* signup & login syle */
+.loginWrapper{
+  width: 50%;
+  text-align: center;
+}

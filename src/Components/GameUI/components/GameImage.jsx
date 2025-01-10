@@ -8,7 +8,7 @@ function GameImage({ image }){
             alt="game image"
             effect="opacity"
             wrapperProps={{
-                style: { transiotionDelay: "0.5s"}
+                style: { transitionDelay: "0.5s"},
             }}
             src={image}
         />
