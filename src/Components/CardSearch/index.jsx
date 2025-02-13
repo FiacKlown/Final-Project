@@ -1,12 +1,24 @@
-import style from './style.module.css'
+/* eslint-disable react/prop-types */
+import style from "./style.module.css";
+import { Link } from "react-router";
 
-export default function CardSearch(/* {game} */){
-    /* const {background_image, name} = game; */
+export default function CardSearch({ game, closeDialog }) {
+  const { name, background_image } = game;
 
-    return(
-        <article className={style.cardResult}>
-            <img className={style.imgAvatarResult} src="" alt="image suggestion" />
-            <small>{name}</small>
-        </article>
-    )
+  const handleClick = () => {
+    closeDialog();
+  };
+
+  return (
+    <Link to={`/game/${game.id}`} className={`${style.cardLink}`} onClick={handleClick}>
+      <div className={style.cardResult}>
+        <img
+          className={style.imgAvatarResult}
+          src={background_image}
+          alt="image suggestions"
+        />
+        <small>{name}</small>
+      </div>
+    </Link>
+  );
 }

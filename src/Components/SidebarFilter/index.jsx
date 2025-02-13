@@ -1,14 +1,33 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Link} from "react-router";
 import style from './style.module.css'
+import SessionContext from '../../context/SessionContext'
+import { useContext } from "react";
+import useProfile from "../../hooks/useProfile";
 
-
-export default function sideBarFilters({genres, platforms}){
+export default function sideBarFilters({genres}){
+    const session = useContext(SessionContext)
+    const {username} = useProfile();
     
     return(
-            <aside className={`${style.sidebar}`}>
-                <details className='dropdown'>
-                        <summary className="btnSidebar">Genres</summary>
-                        <ul className={`${style.scrollBtn}`}>
+        <div className={style.positionSticky}>
+        {session ? 
+            <aside className={style.sidebar}>
+                <details className={style.dropdown} >
+                    <summary>{username}</summary>
+                    <ul>
+                        <li>
+                            <Link to={"/profile"} href="#">Profile</Link>
+                        </li>
+                        <li>
+                            <Link to={"/account"} href="#">Account</Link>
+                        </li>
+                    </ul>
+                </details>
+
+                <details className={style.dropdown}>
+                        <summary>Genres</summary>
+                        <ul className={style.scrollBtn}>
                         {genres.map((genre) => (
                             <li key={genre.id}>
                                 <Link to={`/games/${genre.slug}`}>{genre.name}</Link>
@@ -16,17 +35,21 @@ export default function sideBarFilters({genres, platforms}){
                         ))}
                         </ul>
                 </details>
-                    
-                <details className="dropdown">
-                    <summary className="btnSidebar">Platforms</summary>
-                        <ul className="">
-                            {platforms.map((platform) => (
-                                <li key={platform.id}> 
-                                    <Link to={`/platforms/${platform.slug}`}>{platform.name}</Link>
-                                </li>   
-                            ))}
+            </aside>  
+        :
+            <aside className={style.sidebar}>
+                <details className={style.dropdown}>
+                        <summary>Genres</summary>
+                        <ul className={`${style.scrollBtn}`}>
+                        {genres.map((genre) => (
+                            <li key={genre.id}>
+                                <Link to={`/games/${genre.slug}`}>{genre.name}</Link>
+                            </li>
+                        ))}
                         </ul>
-                </details>
+                </details>    
             </aside>
+        }
+        </div>
     )
 }

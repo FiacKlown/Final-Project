@@ -1,7 +1,11 @@
-.layoutWrapper{
-    display: flex;
+.layoutWrapper {
+  display: flex;
 }
 
-.sidebarWrapper{
-    width: 25%;
+.sidebarWrapper {
+  width: 25%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
 }

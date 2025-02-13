@@ -1,87 +1,90 @@
 /* COLORS NAVBAR & UTILITIES*/
-.color1{
-    background-color: rgb(50, 50, 50);
-}
-  
-.color2{
-      background-color: rgb(219, 102, 34);
-}
-  
-.d-flex{
-    display: flex;
+.color1 {
+  background-color: rgb(30, 30, 30);
 }
 
-.left{
-    margin-left: 10px;
+.color2 {
+  background-color: rgb(219, 102, 34);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.left {
+  margin-left: 10px;
 }
 
 /* NAVBAR STYLE */
-.roundNav{
-    border-radius: 30px;
-    display: flex;
-    max-height: 60px;
+.roundNav {
+  border-radius: 30px;
+  display: flex;
+  max-height: 60px;
+  margin: 10px;
+  width: 85%;
 }
 
-.navbarMargin{
-    margin: 10px;
+.navbarMargin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
 }
 
 /* SEARCH BAR */
 .searchBar {
-    margin-top: 6px;
-    max-height: 48px;
-    border-radius: 30px;
-    border: 3px solid rgb(50, 50, 50); 
-    background-color: rgb(50, 50, 50); 
-    color: white; 
-    transition: all 0.4s ease; 
-    font-size: 18px;
+  margin-top: 6px;
+  max-height: 48px;
+  border-radius: 30px;
+  border: 3px solid rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30);
+  color: white;
+  font-size: 18px;
 }
 
 .searchBar:focus {
-    outline: none;
-    border-color: white; 
-    width: 130%; 
-}  
-
-.searchBar:hover {
-    background-color: rgb(50, 50, 50); 
-    border-color: white;
+  outline: none;
+  border-color: white;
+  width: 130%;
 }
 
-.searchNav{
-    width: 50%;
+.searchBar:hover {
+  background-color: rgb(30, 30, 30);
+  border-color: white;
+}
+
+.searchNav {
+  width: 50%;
 }
 
 /* BUTTONS LOGIN-REGISTER-SIDEBAR*/
 .loginBtn {
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: 3px solid rgb(50, 50, 50);
-    background-color: rgb(50, 50, 50);
-    color: white;
-    font-size: 16px; 
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
 .loginBtn:hover {
-    background-color: rgb(50, 50, 50); 
-    border-color: white;
-} 
-  
-.btnSidebar{
-    background-color: rgb(50, 50, 50);
-    text-align: center;
-    color: white;
+  background-color: rgb(30, 30, 30);
+  border-color: white;
 }
-  
-.buttonPosition{
-    margin-top: 6px;
-    margin-right: 10px;
+
+.buttonPosition {
+  margin-top: 6px;
+  margin-right: 10px;
 }
-  
 
+.btnHomePosition {
+  margin-top: 10px;
+  margin-left: 20px;
+}
 
-
-  
+.logoPosition {
+  margin-left: 3%;
+}

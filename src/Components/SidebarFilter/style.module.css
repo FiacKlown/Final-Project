@@ -1,8 +1,67 @@
-.scrollBtn{
-  height: 500px;
-  overflow-y: scroll;
+.sidebar {
+  padding-left: 10px;
+  margin-top: 50px;
 }
 
-.sidebar{
-  padding-left: 10px;
+.dropdownStyle {
+  border-radius: 20px;
+}
+
+.dropdown summary {
+  background-color: #ece6e6;
+  color: #000000 !important;
+  padding: 20px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: x-large;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dropdown summary:hover {
+  background-color: rgb(219, 102, 34);
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+}
+
+.dropdown li:hover {
+  background-color: rgb(219, 102, 34);
+  border-radius: 8px;
+}
+
+.dropdown ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.scrollBtn {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.scrollBtn::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollBtn::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.scrollBtn::-webkit-scrollbar-thumb {
+  background-color: rgb(50, 50, 50);
+  border-radius: 5px;
+  border: 3px solid #f1f1f1;
 }
