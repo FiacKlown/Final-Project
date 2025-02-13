@@ -1,4 +1,4 @@
-import NavbarUI from "../Components/NavbarUI";
+import NavbarUI from "../Components/NavbarUI/index.jsx"
 import SidebarFilter from "../Components/SidebarFilter/index.jsx";
 import { useLoaderData } from "react-router";
 import { Outlet } from "react-router";
