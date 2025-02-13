@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import GameUI from "../Components/GameUI";
+import GameUI from "../Components/GameUI/Index";
 import { useInView } from "react-intersection-observer";
 import useGames from "../hooks/useGames";
 
