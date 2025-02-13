@@ -1,4 +1,4 @@
-import NavbarUI from "../Components/NavbarUI"
+/* import NavbarUI from "../Components/NavbarUI" */
 import SidebarFilter from "../Components/SidebarFilter/index.jsx";
 import { useLoaderData } from "react-router";
 import { Outlet } from "react-router";
@@ -9,7 +9,7 @@ function AppLayout() {
 
   return (
     <div className="">
-      <NavbarUI />
+      {/* <NavbarUI /> */}
 
       <div className={`${style.layoutWrapper}`}>
         <div className={`${style.sidebarWrapper}`}>
