@@ -1,0 +1,94 @@
+.dFlex {
+  display: flex;
+}
+
+.BtnPosition {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.loginPage {
+  height: 100vh;
+  padding-top: 7%;
+  display: flex;
+}
+
+.btnHomePosition {
+  margin-top: 10px;
+}
+
+.btnHome {
+  text-decoration: none;
+}
+
+.loginBtn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid rgb(50, 50, 50);
+  background-color: rgb(210, 79, 59);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-left: 10px;
+}
+
+.loginBtn:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+}
+.loginBtn:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+.loginWrapper1 {
+  width: 30%;
+  text-align: center;
+  padding-right: 20px;
+  margin-top: 5%;
+}
+.loginWrapper2 {
+  width: 70%;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.logoPosition {
+  padding-top: 10px;
+}
+
+label {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.inputLogin {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(30, 30, 30);
+  border: 3px solid rgb(210, 79, 59);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.inputLogin:focus {
+  border-color: 10px solid rgb(210, 79, 59) !important;
+  outline: 2px solid rgb(210, 79, 59);
+}
+
+.buttonSignUp {
+  background-color: rgb(210, 79, 59);
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid rgb(210, 79, 59);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonSignUp:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+}

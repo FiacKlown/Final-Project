@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import supabase from "../supabase/client";
-import style from "./style.module.css";
+import realtimeChat from "../css/realtimeChat.module.css";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
@@ -72,14 +72,14 @@ export default function RealtimeChat({ game }) {
 
   return (
     <div
-      className={style.message}
+      className={realtimeChat.message}
       ref={messageRef}
       style={{ maxHeight: "600px", overflowY: "auto" }}
     >
       {error && <article>{error}</article>}
       {messages &&
         messages.map((message) => (
-          <article key={message.id} className={style.detailArticle}>
+          <article key={message.id} className={realtimeChat.detailArticle}>
             <p style={{ color: "black", fontWeight: "bold" }}>
               {message.profile_username}
             </p>

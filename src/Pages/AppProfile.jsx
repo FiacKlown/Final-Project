@@ -51,33 +51,33 @@ export default function AppProfile() {
           </Link>
         </div>
         <div
-          className="buttonPosition BtnPosition"
+          className={profileStyle.btnPosition}
           style={{ marginLeft: "auto" }}
         >
           <Link to={`/`}>
-            <button onClick={signOut} className="loginBtn">
+            <button onClick={signOut} className={profileStyle.signOutBtn}>
               Sign Out
             </button>
           </Link>
         </div>
       </div>
-      <div className="containerProfile">
+      <div className={profileStyle.containerProfile}>
         <header>
           <h1 style={{ paddingTop: "5%" }}>
             Welcome {username} to your profile page
           </h1>
         </header>
-        <div className="d-flex">
-          <div className="userCard">
+        <div className={profileStyle.dFlex}>
+          <div className={profileStyle.userCard}>
             <section>
               <img
                 src={avatar_url ? getAvatarUrl(avatar_url) : DefaultAvatar}
                 alt={"image profile"}
               />
             </section>
-            <section id="infoUser" className="">
+            <section id="infoUser">
               <details>
-                <summary className="summaryProfile" role="button">
+                <summary className={profileStyle.summaryProfile} role="button">
                   Favourite Games
                 </summary>
                 <Toaster richColors />
@@ -91,7 +91,7 @@ export default function AppProfile() {
               </details>
             </section>
           </div>
-          <div className="datiUser">
+          <div className={profileStyle.dateUser}>
             <p>
               <strong>Nickname:</strong> {username}
             </p>

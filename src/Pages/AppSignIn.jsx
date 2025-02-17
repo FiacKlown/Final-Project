@@ -3,6 +3,7 @@ import supabase from "../supabase/client";
 import { Toaster, toast } from "sonner";
 import loginImage from "../assets/images/loginImage.jpg";
 import Rehacktor from "../assets/images/Rehacktor.png";
+import signInStyle from "../css/signInStyle.module.css"
 
 export default function AppSignIn() {
   const navigate = useNavigate();
@@ -31,32 +32,32 @@ export default function AppSignIn() {
 
   return (
     <div className="container ">
-      <div className="d-flex">
-        <div className="logoPosition">
+      <div className={signInStyle.dFlex}>
+        <div className={signInStyle.logoPosition}>
           <Link to={`/`}>
             <img src={Rehacktor} alt="Site Logo" style={{ width: "150px" }} />
           </Link>
         </div>
         <div
-          className="buttonPosition BtnPosition"
+          className={signInStyle.BtnPosition}
           style={{ marginLeft: "auto" }}
         >
           <Link to={`/signin`}>
-            <button className="loginBtn left">Login</button>
+            <button className={signInStyle.loginBtn}>Login</button>
           </Link>
           <Link to={`/signup`}>
-            <button className="loginBtn left">Register</button>
+            <button className={signInStyle.loginBtn}>Register</button>
           </Link>
         </div>
       </div>
 
-      <div className="d-flex loginPage">
-        <div className="loginWrapper1">
+      <div className={signInStyle.loginPage}>
+        <div className={signInStyle.loginWrapper1}>
           <h1>Log In</h1>
           <form onSubmit={handleSignIn}>
             <label htmlFor="email">Email address</label>
             <input
-              className="inputLogin"
+              className={signInStyle.inputLogin}
               type="email"
               name="email"
               placeholder="test@email.com"
@@ -65,19 +66,19 @@ export default function AppSignIn() {
 
             <label htmlFor="password">Password</label>
             <input
-              className="inputLogin"
+              className={signInStyle.inputLogin}
               type="password"
               name="password"
               placeholder="Password"
               id="password"
             ></input>
-            <button className="buttonSignUp" type="submit">
+            <button className={signInStyle.buttonSignUp} type="submit">
               Log in
             </button>
             <Toaster richColors />
           </form>
         </div>
-        <div className="loginWrapper2">
+        <div className={signInStyle.loginWrapper2}>
           <img
             src={loginImage}
             alt="Login Illustration"

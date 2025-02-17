@@ -1,0 +1,77 @@
+.dFlex {
+  display: flex;
+}
+
+.logoPosition {
+  padding-top: 10px;
+}
+
+.registerPage {
+  height: 100vh;
+  padding-top: 5%;
+  display: flex;
+}
+
+.registerWrapper1 {
+  width: 30%;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.registerWrapper2 {
+  width: 70%;
+  text-align: center;
+  padding-left: 20px;
+  padding-top: 3%;
+}
+
+.inputRegister {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(30, 30, 30);
+  border: 3px solid rgba(225, 57, 71, 0.944);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.inputRegister:focus {
+  border-color: 10px solid rgba(225, 57, 71, 0.944) !important;
+  outline: 2px solid rgb(210, 79, 59);
+}
+
+.buttonRegister {
+  background-color: rgba(225, 57, 71, 0.944);
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid rgb(210, 79, 59);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonRegister:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+}
+
+
+
+.registerBtn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid rgb(50, 50, 50);
+  background-color: rgb(210, 79, 59);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-left: 10px;
+}
+
+.registerBtn:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+}
+.registerBtn:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}

@@ -1,3 +1,60 @@
-.d-flex {
+.dFlex {
   display: flex;
+}
+
+.logoPosition {
+  padding-top: 10px;
+}
+
+.btnPosition {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.signOutBtn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid rgb(50, 50, 50);
+  background-color: rgb(210, 79, 59);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.signOutBtn:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+}
+
+.signOutBtn:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+
+.containerProfile {
+  height: 100vh;
+}
+
+.userCard {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.dateUser {
+  width: 50%;
+}
+
+.infoUser {
+  width: 50%;
+}
+
+.summaryProfile {
+  align-items: end;
+  background-color: rgb(219, 102, 34);
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid rgb(210, 79, 59);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
