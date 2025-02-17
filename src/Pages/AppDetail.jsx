@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useLoaderData } from "react-router";
 import { useState, useEffect, useContext } from "react";
-import GameImage from "../Components/GameUI/components/GameImage";
+import GameImage from "../components/gameUI/components/gameImage";
 import SessionContext from "../context/SessionContext";
-import supabase from "../DataBase/client";
+import supabase from "../supabase/client";
 import { Toaster, toast } from "sonner";
-import RealtimeChat from "../RealtimeChatUI";
+import RealtimeChat from "../realtimeChatUI";
+import detailStyle from "../css/detailStyle.module.css"
 
 export default function AppDetail() {
   const session = useContext(SessionContext);
@@ -88,36 +89,28 @@ export default function AppDetail() {
   }, []);
 
   return (
-    <div className="game_detail_wrapper">
-      <div className="game_info">
+    <div className={detailStyle.gameDetailWrapper}>
+      <div className={detailStyle.gameInfo}>
         <h1 style={{ textAlign: "center" }}>{game.name}</h1>
 
-        <div className="imageContainer">
-          <div style={{ width: "50%" }}>
-            <GameImage image={game.background_image} className="imageStyle" />
-          </div>
-          <div style={{ width: "50%" }}>
-            <GameImage
-              image={game.background_image_additional}
-              className="imageStyle"
-            />
-          </div>
+        <div className={detailStyle.imageContainer}>
+            <GameImage image={game.background_image} className={detailStyle.imageStyle} />
         </div>
 
         <div>
           {session && (
-            <div style={{ paddingRight: "10px" }}>
+            <div style={{ paddingRight: "10px", margin:"10px"}}>
               {fav.length === 0 ? (
                 <button
                   onClick={() => insertFavGame(game)}
-                  className="fullWidthBtn"
+                  className={detailStyle.fullWidthBtn}
                 >
                   Aggiungi ai preferiti
                 </button>
               ) : (
                 <button
                   onClick={() => removeFavGame(game)}
-                  className="fullWidthBtn"
+                  className={detailStyle.fullWidthBtn}
                 >
                   Rimuovi dai preferiti
                 </button>
@@ -132,12 +125,22 @@ export default function AppDetail() {
             <h4 style={{ textAlign: "start" }}>{game.rating}/5</h4>
           </div>
         </div>
-        <h3>About</h3>
-        <small>{game.description_raw}</small>
+        <h3 style={{ textAlign: "center" }}>About</h3>
+        <div style={{ textAlign: "center" }}>
+          <small>{game.description_raw}</small>
+        </div>
+        
+
+        <div>
+            <GameImage
+              image={game.background_image_additional}
+              className={detailStyle.imageStyle}
+            />
+          </div>
       </div>
-      <div className="game_media">
+      <div className={detailStyle.gameMedia}>
         {session ? (
-          <div style={{ paddingTop: "10%" }}>
+          <div style={{ paddingTop: "7%", position:"sticky", top:"0" }}>
             <h5 style={{ color: "white" }}>Chat live with gamers</h5>
 
             <div>
@@ -145,15 +148,15 @@ export default function AppDetail() {
             </div>
             <div>
               <form onSubmit={handleMessageSubmit}>
-                <fieldset role="group" className="">
+                <fieldset role="group">
                   <input
-                    className="inputDetail fieldset"
+                    className={detailStyle.inputDetail}
                     type="text"
                     name="message"
                     placeholder="Chat..."
                   />
                   <input
-                    className="buttonDetail fieldset"
+                    className={detailStyle.buttonDetail}
                     type="submit"
                     value="Send"
                   />
@@ -163,7 +166,10 @@ export default function AppDetail() {
             </div>
           </div>
         ) : (
-          <h2> Sign up or log in to chat with other online users </h2>
+          <div style={{position:"sticky", top:"0", paddingTop:"20px" , textAlign:"center"} }>
+            <h2> Sign up or log in to chat with other online users </h2>
+          </div>
+          
         )}
       </div>
     </div>

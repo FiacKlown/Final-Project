@@ -1,0 +1,93 @@
+.dFlex {
+  display: flex;
+}
+
+.logoPosition {
+  padding-top: 10px;
+}
+
+.BtnPosition {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.loginBtn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid rgb(50, 50, 50);
+  background-color: rgb(210, 79, 59);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.loginBtn:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+}
+
+.loginBtn:focus {
+  outline: 2px solid rgb(255, 255, 255);
+}
+
+.formContainer {
+  height: 100vh;
+  display: flex;
+  padding-top: 3%;
+}
+
+.avatarSection {
+  flex: 1;
+  display: flex;
+  padding-top: 10%;
+  padding-left: 5%;
+}
+
+.formFields {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.formFields div {
+  margin-bottom: 15px;
+}
+
+.inputAccount {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(30, 30, 30);
+  border: 3px solid rgb(210, 79, 59);
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.inputAccount:focus {
+  border-color: 10px solid rgb(210, 79, 59) !important;
+  outline: 2px solid rgb(210, 79, 59);
+}
+
+.buttonAccount {
+  background-color: rgb(210, 79, 59);
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid rgb(210, 79, 59);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button {
+    background-color: #4CAF50; /* Colore di sfondo verde */
+    color: white; /* Colore del testo bianco */
+    padding: 10px 20px; /* Spaziatura interna */
+    border: none; /* Rimuove il bordo */
+    border-radius: 5px; /* Bordo arrotondato */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra */
+    font-size: 16px; /* Imposta la dimensione del font */
+  }
+
+.buttonAccount:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
-import supabase from "../DataBase/client";
+import supabase from "../supabase/client";
 import style from "./style.module.css";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router";
-import supabase from "../DataBase/client";
+import supabase from "../supabase/client";
 import { Toaster, toast } from "sonner";
 import RegisterImage from "../assets/images/RegisterImage.jpg";
 import Rehacktor from "../assets/images/Rehacktor.png";

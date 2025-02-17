@@ -8,10 +8,10 @@ export default function GameImage({ image }) {
       alt="game image"
       effect="opacity"
       wrapperProps={{
-        style: { transitionDelay: "0.5s" },
+        style: { transitionDelay: "0.5s"},
       }}
       src={image}
-      style={{ paddingBottom: "20px", width: "100%", height: "300px" }}
+      style={{ width: "100%", minHeight: "300px", borderRadius:"10px 10px 10px 10px" }}
     />
   );
 }

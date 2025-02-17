@@ -1,0 +1,69 @@
+.gameDetailWrapper {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.gameInfo {
+  width: 70%;
+}
+
+.gameMedia {
+  width: 30%;
+  position: sticky;
+  top: 0;
+}
+
+.imageContainer {
+  padding-right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.fullWidthBtn {
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(219, 102, 34);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding-right: 10px;
+}
+
+.fullWidthBtn:hover {
+  background-color: rgb(35, 35, 35);
+  border-color: 10px solid rgb(255, 255, 255) !important;
+  outline: 3px solid rgb(255, 255, 255);
+}
+
+.inputDetail {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
+  border: 3px solid rgb(219, 102, 34);
+  width: 100%;
+}
+
+.inputDetail:focus {
+  border-color: 10px solid rgb(219, 102, 34) !important;
+  outline: 2px solid rgb(219, 102, 34);
+}
+
+.buttonDetail {
+  background-color: rgb(210, 79, 59);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 2px solid rgb(210, 79, 59);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonDetail:hover {
+  background-color: rgb(50, 50, 50);
+  border-color: white;
+  outline: none;
+}

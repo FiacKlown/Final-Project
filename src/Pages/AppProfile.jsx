@@ -1,13 +1,13 @@
 import useProfile from "../hooks/useProfile";
 import { getAvatarUrl } from "../utils/getAvatarUrl";
 import { Link } from "react-router";
-import DataBase from "../DataBase/client";
+import supabase from "../supabase/client";
 import SessionContext from "../context/SessionContext";
 import { useEffect, useState, useContext } from "react";
-import supabase from "../DataBase/client";
 import { Toaster, toast } from "sonner";
 import Rehacktor from "../assets/images/Rehacktor.png";
 import DefaultAvatar from "../../public/DefaultAvatar.svg";
+import profileStyle from "../css/profileStyle.module.css"
 
 export default function AppProfile() {
   const { loading, username, first_name, last_name, avatar_url } = useProfile();
@@ -32,7 +32,7 @@ export default function AppProfile() {
   }, [session]);
 
   const signOut = async () => {
-    const { error } = await DataBase.auth.signOut();
+    const { error } = await supabase.auth.signOut();
     if (error) {
       alert(error);
     }
@@ -44,8 +44,8 @@ export default function AppProfile() {
 
   return (
     <div className="container">
-      <div className="d-flex">
-        <div className="logoPosition">
+      <div className={profileStyle.dFlex}>
+        <div className={profileStyle.logoPosition}>
           <Link to={`/`}>
             <img src={Rehacktor} alt="Site Logo" style={{ width: "150px" }} />
           </Link>

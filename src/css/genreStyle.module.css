@@ -1,0 +1,16 @@
+.gamesWrapper {
+  width: 100%;
+  padding: 10px;
+}
+
+.gameList {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.loadingBg {
+  background-color: rgb(30, 30, 30);
+  font-size: 2rem;
+  display: block;
+}

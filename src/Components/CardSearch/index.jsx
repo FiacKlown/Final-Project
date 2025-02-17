@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import style from "./style.module.css";
+import cardStyle from "../../css/cardStyle.module.css";
 import { Link } from "react-router";
 
 export default function CardSearch({ game, closeDialog }) {
@@ -10,10 +10,10 @@ export default function CardSearch({ game, closeDialog }) {
   };
 
   return (
-    <Link to={`/game/${game.id}`} className={`${style.cardLink}`} onClick={handleClick}>
-      <div className={style.cardResult}>
+    <Link to={`/game/${game.id}`} className={cardStyle.cardLink} onClick={handleClick}>
+      <div className={cardStyle.cardResult}>
         <img
-          className={style.imgAvatarResult}
+          className={cardStyle.imgAvatarResult}
           src={background_image}
           alt="image suggestions"
         />

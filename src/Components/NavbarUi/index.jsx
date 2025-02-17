@@ -1,10 +1,10 @@
 import { useState } from "react";
-import style from "./style.module.css";
+import navbarStyle from "../../css/navbarStyle.module.css";
 import { Link } from "react-router";
 import SessionContext from "../../context/SessionContext";
-import DataBase from "../../DataBase/client";
+import supabase from "../../supabase/client";
 import { useContext } from "react";
-import ModalSearch from "../ModalSearch";
+import ModalSearch from "../modalSearch";
 import Rehacktor from "../../assets/images/Rehacktor.png";
 
 export default function NavbarUI() {
@@ -20,7 +20,7 @@ export default function NavbarUI() {
   };
 
   const signOut = async () => {
-    const { error } = await DataBase.auth.signOut();
+    const { error } = await supabase.auth.signOut();
     if (error) {
       alert(error);
     }
@@ -29,16 +29,16 @@ export default function NavbarUI() {
   return (
     <div>
       <ModalSearch focus={focus} handleClickOverlay={handleClickOverlay} />
-      <div className={`${style.navbarMargin}`}>
-        <div className={style.logoPosition}>
+      <div className={navbarStyle.navbarMargin}>
+        <div className={navbarStyle.logoPosition}>
           <Link to={`/`} className="btnHome">
             <img src={Rehacktor} alt="Site Logo" style={{ width: "150px" }} />
           </Link>
         </div>
-        <div className={`${style.roundNav} ${style.color2}`}>
-          <div className={`${style.searchNav}`}>
+        <div className={navbarStyle.roundNav}>
+          <div className={navbarStyle.searchNav}>
             <input
-              className={`${style.searchBar} ${style.left}`}
+              className={navbarStyle.searchBar}
               type="search"
               name="search"
               aria-label="Search"
@@ -46,25 +46,25 @@ export default function NavbarUI() {
             />
           </div>
           <div
-            className={`${style.buttonPosition}`}
+            className={navbarStyle.buttonPosition}
             style={{ marginLeft: "auto" }}
           >
             {session ? (
               <button
                 onClick={signOut}
-                className={`${style.loginBtn} ${style.left}`}
+                className={navbarStyle.loginBtn}
               >
                 Sign Out
               </button>
             ) : (
               <div>
                 <Link to={`/signin`}>
-                  <button className={`${style.loginBtn} ${style.left}`}>
+                  <button className={navbarStyle.loginBtn}>
                     Login
                   </button>
                 </Link>
                 <Link to={`/signup`}>
-                  <button className={`${style.loginBtn} ${style.left}`}>
+                  <button className={navbarStyle.loginBtn}>
                     Register
                   </button>
                 </Link>

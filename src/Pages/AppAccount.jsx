@@ -1,11 +1,11 @@
-import supabase from "../DataBase/client";
+import supabase from "../supabase/client";
 import SessionContext from "../context/SessionContext";
 import { Toaster, toast } from "sonner";
 import { useState, useEffect, useContext } from "react";
-import Avatar from "../Components/AvatarUI/Avatar";
+import Avatar from "../components/avatarUI/avatar.jsx";
 import { Link } from "react-router";
-import DataBase from "../DataBase/client";
 import Rehacktor from "../assets/images/Rehacktor.png";
+import accountStyle from "../css/accountStyle.module.css"
 
 export default function AppAccount() {
   const session = useContext(SessionContext);
@@ -79,7 +79,7 @@ export default function AppAccount() {
   }
 
   const signOut = async () => {
-    const { error } = await DataBase.auth.signOut();
+    const { error } = await supabase.auth.signOut();
     if (error) {
       alert(error);
     }
@@ -87,18 +87,18 @@ export default function AppAccount() {
 
   return (
     <div className="container">
-      <div className="d-flex">
-        <div className="logoPosition">
+      <div className={accountStyle.dFlex}>
+        <div className={accountStyle.logoPosition}>
           <Link to={`/`}>
             <img src={Rehacktor} alt="Site Logo" style={{ width: "150px" }} />
           </Link>
         </div>
         <div
-          className="buttonPosition BtnPosition"
+          className={accountStyle.BtnPosition}
           style={{ marginLeft: "auto" }}
         >
           <Link to={`/`}>
-            <button onClick={signOut} className="loginBtn">
+            <button onClick={signOut} className={accountStyle.loginBtn}>
               Sign Out
             </button>
           </Link>
@@ -109,8 +109,8 @@ export default function AppAccount() {
         account
       </h3>
       <form onSubmit={updateProfile} className="form-widget">
-        <div className="formContainer">
-          <div className="avatarSection">
+        <div className={accountStyle.formContainer}>
+          <div className={accountStyle.avatarSection}>
             <Avatar
               url={avatar_url}
               size={300}
@@ -120,11 +120,11 @@ export default function AppAccount() {
             />
           </div>
 
-          <div className="formFields">
+          <div className={accountStyle.formFields}>
             <div>
               <label htmlFor="email">Email</label>
               <input
-                className="inputAccount"
+                className={accountStyle.inputAccount}
                 id="email"
                 type="text"
                 value={session.user.email}
@@ -135,7 +135,7 @@ export default function AppAccount() {
             <div>
               <label htmlFor="username">Username</label>
               <input
-                className="inputAccount"
+                className={accountStyle.inputAccount}
                 id="username"
                 type="text"
                 required
@@ -147,7 +147,7 @@ export default function AppAccount() {
             <div>
               <label htmlFor="first_name">First name</label>
               <input
-                className="inputAccount"
+                className={accountStyle.inputAccount}
                 id="first_name"
                 type="text"
                 value={first_name || ""}
@@ -158,7 +158,7 @@ export default function AppAccount() {
             <div>
               <label htmlFor="last_name">Last name</label>
               <input
-                className="inputAccount"
+                className={accountStyle.inputAccount}
                 id="last_name"
                 type="text"
                 value={last_name || ""}
@@ -168,7 +168,7 @@ export default function AppAccount() {
 
             <div>
               <button
-                className="button block buttonAccount"
+                className={accountStyle.buttonAccount}
                 type="submit"
                 disabled={loading}
               >

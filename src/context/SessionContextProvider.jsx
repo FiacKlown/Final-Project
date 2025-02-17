@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import SessionContext from "../context/SessionContext";
-import DataBase from "../DataBase/client";
+import supabase from "../supabase/client";
 
 export default function SessionContextProvider({ children }) {
   const [session, setSession] = useState(null);
@@ -9,7 +9,7 @@ export default function SessionContextProvider({ children }) {
   useEffect(() => {
     const {
       data: { subscription },
-    } = DataBase.auth.onAuthStateChange((event, session) => {
+    } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === "SIGNED_OUT") {
         setSession(null);
       } else if (session) {

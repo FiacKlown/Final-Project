@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import supabase from "../DataBase/client";
+import supabase from "../supabase/client";
 import SessionContext from "../context/SessionContext";
 import { useContext } from "react";
 

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Link} from "react-router";
-import style from './style.module.css'
+import sidebarStyle from '../../css/sidebarStyle.module.css'
 import SessionContext from '../../context/SessionContext'
 import { useContext } from "react";
 import useProfile from "../../hooks/useProfile";
@@ -10,10 +10,10 @@ export default function sideBarFilters({genres}){
     const {username} = useProfile();
     
     return(
-        <div className={style.positionSticky}>
+        <div className={sidebarStyle.positionSticky}>
         {session ? 
-            <aside className={style.sidebar}>
-                <details className={style.dropdown} >
+            <aside className={sidebarStyle.sidebar}>
+                <details className={sidebarStyle.dropdown} >
                     <summary>{username}</summary>
                     <ul>
                         <li>
@@ -25,9 +25,9 @@ export default function sideBarFilters({genres}){
                     </ul>
                 </details>
 
-                <details className={style.dropdown}>
+                <details className={sidebarStyle.dropdown}>
                         <summary>Genres</summary>
-                        <ul className={style.scrollBtn}>
+                        <ul className={sidebarStyle.scrollBtn}>
                         {genres.map((genre) => (
                             <li key={genre.id}>
                                 <Link to={`/games/${genre.slug}`}>{genre.name}</Link>
@@ -37,10 +37,10 @@ export default function sideBarFilters({genres}){
                 </details>
             </aside>  
         :
-            <aside className={style.sidebar}>
-                <details className={style.dropdown}>
+            <aside className={sidebarStyle.sidebar}>
+                <details className={sidebarStyle.dropdown}>
                         <summary>Genres</summary>
-                        <ul className={`${style.scrollBtn}`}>
+                        <ul className={sidebarStyle.scrollBtn}>
                         {genres.map((genre) => (
                             <li key={genre.id}>
                                 <Link to={`/games/${genre.slug}`}>{genre.name}</Link>

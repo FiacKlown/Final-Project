@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-import CardSearch from "../CardSearch";
+import CardSearch from "../cardSearch";
+import cardStyle from "../../css/searchStyle.module.css"
 
 export default function ModalSearch({ focus, handleClickOverlay }) {
   const [search, setSearch] = useState("");
@@ -49,7 +50,7 @@ export default function ModalSearch({ focus, handleClickOverlay }) {
 
   return (
     <dialog open={focus}>
-      <article className="artSearch">
+      <article className={cardStyle.artSearch}>
         <header>
           <button aria-label="Close" rel="prev" onClick={closeDialog}></button>
           <h3>Search a game</h3>
@@ -63,7 +64,7 @@ export default function ModalSearch({ focus, handleClickOverlay }) {
           onChange={(event) => setSearch(event.target.value)}
         />
 
-        <div className="cardSearchWrapper">
+        <div className={cardStyle.cardSearchWrapper}>
           {loading && <article aria-busy="true"></article>}
           {games &&
             games.map((game) => (

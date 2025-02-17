@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import GameUI from "../Components/GameUI";
+import GameUI from "../components/gameUI/index.jsx";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useInView } from "react-intersection-observer";
+import genreStyle from "../css/genreStyle.module.css"
 
 export default function AppGenre() {
   const { genre_slug } = useParams();
@@ -44,17 +45,17 @@ export default function AppGenre() {
   }, [page]);
 
   return (
-    <div className="gamesWrapper">
+    <div className={genreStyle.gamesWrapper}>
       <h1 className="title">Genre: {genre_slug}</h1>
 
-      <div className="gameList">
+      <div className={genreStyle.gameList}>
         {genre.map((game) => (
           <GameUI key={game.id} game={game} />
         ))}
       </div>
 
       {loading && (
-        <article aria-busy="true" className="loading loadingBg"></article>
+        <article aria-busy="true" className={genreStyle.loadingBg}></article>
       )}
 
       <div ref={ref}></div>
